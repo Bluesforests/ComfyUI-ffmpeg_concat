@@ -1,0 +1,1154 @@
+{
+  "id": "46ba980f-eef2-48bb-b614-6be05883331b",
+  "revision": 0,
+  "last_node_id": 147,
+  "last_link_id": 186,
+  "nodes": [
+    {
+      "id": 13,
+      "type": "PreviewAny",
+      "pos": [
+        2124.655029296875,
+        669.787109375
+      ],
+      "size": [
+        231.41659545898438,
+        134
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 170
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "PreviewAny",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 102,
+      "type": "VideoToPath",
+      "pos": [
+        1557.9427490234375,
+        816.5526123046875
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 163
+        },
+        {
+          "name": "frames",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": [
+            168
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VideoToPath",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "fps": true
+          }
+        }
+      },
+      "widgets_values": [
+        16
+      ]
+    },
+    {
+      "id": 104,
+      "type": "VideoToPath",
+      "pos": [
+        1558.9290771484375,
+        953.8812255859375
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 164
+        },
+        {
+          "name": "frames",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": [
+            169
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VideoToPath",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "fps": true
+          }
+        }
+      },
+      "widgets_values": [
+        16
+      ]
+    },
+    {
+      "id": 117,
+      "type": "LoadVideo",
+      "pos": [
+        1160,
+        674.0632934570312
+      ],
+      "size": [
+        251.1122589111328,
+        236.7910614013672
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            163
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "LoadVideo",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "file": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "rabitdance.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 122,
+      "type": "LoadVideo",
+      "pos": [
+        1160,
+        967.4668579101562
+      ],
+      "size": [
+        258.9019775390625,
+        214.51876831054688
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            164
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "LoadVideo",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "file": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "rabitdance2.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 125,
+      "type": "ConcatVideos",
+      "pos": [
+        1796.0263671875,
+        818.8941650390625
+      ],
+      "size": [
+        277.1484375,
+        282
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_path1",
+          "type": "STRING",
+          "link": 168
+        },
+        {
+          "name": "video_path2",
+          "type": "STRING",
+          "link": 169
+        },
+        {
+          "name": "video_path3",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "video_path4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "external_audio_path",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_path",
+          "type": "STRING",
+          "links": [
+            170,
+            186
+          ]
+        },
+        {
+          "name": "video",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatVideos",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "mode": true,
+            "target_width": true,
+            "target_height": true,
+            "target_fps": true,
+            "filename_prefix": true,
+            "format": true,
+            "use_shortest": true
+          }
+        }
+      },
+      "widgets_values": [
+        "reencode",
+        0,
+        0,
+        0,
+        "concat_",
+        "mp4",
+        true
+      ]
+    },
+    {
+      "id": 126,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1160,
+        1440
+      ],
+      "size": [
+        214.7587890625,
+        238
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": [
+            173
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.7",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "frame_rate": true,
+            "loop_count": true,
+            "filename_prefix": true,
+            "format": true,
+            "pingpong": true,
+            "save_output": true
+          }
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00001.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif",
+            "frame_rate": 8,
+            "workflow": "AnimateDiff_00001.png",
+            "fullpath": "G:\\SD\\ComfyUI_test\\ComfyUI\\output\\AnimateDiff_00001.gif"
+          }
+        }
+      }
+    },
+    {
+      "id": 127,
+      "type": "PreviewAny",
+      "pos": [
+        1980,
+        1550
+      ],
+      "size": [
+        260.87725830078125,
+        139.85968017578125
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 176
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "PreviewAny",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 129,
+      "type": "VHS_SelectFilename",
+      "pos": [
+        1430,
+        1590
+      ],
+      "size": [
+        219.6669921875,
+        58
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "filenames",
+          "type": "VHS_FILENAMES",
+          "link": 173
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filename",
+          "type": "STRING",
+          "links": [
+            175
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.7",
+        "Node name for S&R": "VHS_SelectFilename",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "index": true
+          }
+        }
+      },
+      "widgets_values": {
+        "index": -1
+      }
+    },
+    {
+      "id": 132,
+      "type": "ConcatVideos",
+      "pos": [
+        1680,
+        1550
+      ],
+      "size": [
+        277.1484375,
+        282
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_path1",
+          "type": "STRING",
+          "link": 175
+        },
+        {
+          "name": "video_path2",
+          "type": "STRING",
+          "link": 185
+        },
+        {
+          "name": "video_path3",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "video_path4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "external_audio_path",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_path",
+          "type": "STRING",
+          "links": [
+            176
+          ]
+        },
+        {
+          "name": "video",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatVideos",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "mode": true,
+            "target_width": true,
+            "target_height": true,
+            "target_fps": true,
+            "filename_prefix": true,
+            "format": true,
+            "use_shortest": true
+          }
+        }
+      },
+      "widgets_values": [
+        "reencode",
+        0,
+        0,
+        0,
+        "concat_",
+        "mp4",
+        true
+      ]
+    },
+    {
+      "id": 133,
+      "type": "ConcatVideos",
+      "pos": [
+        1498.71044921875,
+        202.3684844970703
+      ],
+      "size": [
+        277.1484375,
+        282
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_path1",
+          "type": "STRING",
+          "link": 177
+        },
+        {
+          "name": "video_path2",
+          "type": "STRING",
+          "link": 178
+        },
+        {
+          "name": "video_path3",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "video_path4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "external_audio_path",
+          "shape": 7,
+          "type": "STRING",
+          "link": 179
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output_path",
+          "type": "STRING",
+          "links": [
+            180
+          ]
+        },
+        {
+          "name": "video",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatVideos",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "mode": true,
+            "target_width": true,
+            "target_height": true,
+            "target_fps": true,
+            "filename_prefix": true,
+            "format": true,
+            "use_shortest": true
+          }
+        }
+      },
+      "widgets_values": [
+        "reencode",
+        0,
+        0,
+        0,
+        "concat_",
+        "mp4",
+        true
+      ]
+    },
+    {
+      "id": 134,
+      "type": "PrimitiveString",
+      "pos": [
+        1160,
+        198.96331787109375
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            177
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "PrimitiveString",
+        "ue_properties": {
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "video\\path\\a.mp4"
+      ]
+    },
+    {
+      "id": 136,
+      "type": "PrimitiveString",
+      "pos": [
+        1160,
+        310
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            178
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "PrimitiveString",
+        "ue_properties": {
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "video\\path\\b.mp4"
+      ]
+    },
+    {
+      "id": 137,
+      "type": "PrimitiveString",
+      "pos": [
+        1160,
+        420
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            179
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "PrimitiveString",
+        "ue_properties": {
+          "version": "7.0.1"
+        }
+      },
+      "widgets_values": [
+        "path\\bgm.mp3"
+      ]
+    },
+    {
+      "id": 138,
+      "type": "PreviewAny",
+      "pos": [
+        1812.5439453125,
+        202.36843872070312
+      ],
+      "size": [
+        231.41659545898438,
+        134
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 180
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "PreviewAny",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 143,
+      "type": "VHS_SelectFilename",
+      "pos": [
+        1420,
+        1720
+      ],
+      "size": [
+        219.6669921875,
+        58
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "filenames",
+          "type": "VHS_FILENAMES",
+          "link": 184
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filename",
+          "type": "STRING",
+          "links": [
+            185
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.7",
+        "Node name for S&R": "VHS_SelectFilename",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "index": true
+          }
+        }
+      },
+      "widgets_values": {
+        "index": -1
+      }
+    },
+    {
+      "id": 144,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1160,
+        1770
+      ],
+      "size": [
+        214.7587890625,
+        238
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": [
+            184
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.7",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "frame_rate": true,
+            "loop_count": true,
+            "filename_prefix": true,
+            "format": true,
+            "pingpong": true,
+            "save_output": true
+          }
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00001.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif",
+            "frame_rate": 8,
+            "workflow": "AnimateDiff_00001.png",
+            "fullpath": "G:\\SD\\ComfyUI_test\\ComfyUI\\output\\AnimateDiff_00001.gif"
+          }
+        }
+      }
+    },
+    {
+      "id": 145,
+      "type": "SaveVideo",
+      "pos": [
+        2123.67529296875,
+        866.0233764648438
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 186
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.60",
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto"
+      ]
+    },
+    {
+      "id": 147,
+      "type": "Note",
+      "pos": [
+        2418.794921875,
+        874.16845703125
+      ],
+      "size": [
+        231.06846618652344,
+        219.36981201171875
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Since ComfyUI doesn't provide a \"show video\" node, we can only temporarily use \"save video\" for previewing. The downside is that the video gets saved an extra time.\n\n因为comfyui 没有提供 show video这样的节点，只能暂时用save video来预览。缺点是视频会多保存一次。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      163,
+      117,
+      0,
+      102,
+      0,
+      "VIDEO"
+    ],
+    [
+      164,
+      122,
+      0,
+      104,
+      0,
+      "VIDEO"
+    ],
+    [
+      168,
+      102,
+      0,
+      125,
+      0,
+      "STRING"
+    ],
+    [
+      169,
+      104,
+      0,
+      125,
+      1,
+      "STRING"
+    ],
+    [
+      170,
+      125,
+      0,
+      13,
+      0,
+      "*"
+    ],
+    [
+      173,
+      126,
+      0,
+      129,
+      0,
+      "VHS_FILENAMES"
+    ],
+    [
+      175,
+      129,
+      0,
+      132,
+      0,
+      "STRING"
+    ],
+    [
+      176,
+      132,
+      0,
+      127,
+      0,
+      "*"
+    ],
+    [
+      177,
+      134,
+      0,
+      133,
+      0,
+      "STRING"
+    ],
+    [
+      178,
+      136,
+      0,
+      133,
+      1,
+      "STRING"
+    ],
+    [
+      179,
+      137,
+      0,
+      133,
+      4,
+      "STRING"
+    ],
+    [
+      180,
+      133,
+      0,
+      138,
+      0,
+      "*"
+    ],
+    [
+      184,
+      144,
+      0,
+      143,
+      0,
+      "VHS_FILENAMES"
+    ],
+    [
+      185,
+      143,
+      0,
+      132,
+      1,
+      "STRING"
+    ],
+    [
+      186,
+      125,
+      0,
+      145,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Method A: Use path directly",
+      "bounding": [
+        1164.9671630859375,
+        46.34497833251953,
+        743.0531005859375,
+        80
+      ],
+      "color": "#3f789e",
+      "font_size": 56,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Method B: Use video file",
+      "bounding": [
+        1160.26513671875,
+        528.4415283203125,
+        743.0531005859375,
+        80
+      ],
+      "color": "#3f789e",
+      "font_size": 56,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Method C: video from workflow",
+      "bounding": [
+        1168.3333740234375,
+        1295.697509765625,
+        811.9063720703125,
+        84.55342102050781
+      ],
+      "color": "#3f789e",
+      "font_size": 56,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7972024500000251,
+      "offset": [
+        -936.60107244116,
+        -1039.8232581709397
+      ]
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.26.13",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
