@@ -66,3 +66,6 @@ git clone https://github.com/Bluesforests/ComfyUI-ffmpeg_concat
 
 3. 重启comfyui
 
+## 使用参考
+![exampleA](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20B.png)
+![exampleB](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20A.png)
