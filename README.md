@@ -1,5 +1,6 @@
 # ConcatVideos — ComfyUI 视频拼接节点（支持多格式、不同帧率、外部音频）
-ConcatVideos 是一个为 ComfyUI 设计的高兼容视频拼接节点，支持 1–4 个视频文件输入，可自动统一分辨率/帧率进行稳定拼接，或以无损/高速方式快速串联视频。
+- ConcatVideos 是一个为 ComfyUI 设计的高兼容视频拼接节点，支持 1–4 个视频文件输入，可自动统一分辨率/帧率进行稳定拼接，或以无损/高速方式快速串联视频。
+- 长视频拼接不爆显存。
 
 
 ## 主要特性
@@ -33,9 +34,9 @@ shortest默认开启。
 | reencode（默认） | 重编码、统一分辨率/帧率、最稳定     | 混合不同来源的视频、模型生成片段拼接 |
 | fast             | 无损流拷贝，极快                     | 输入视频规格完全一致               |
 
-fast 模式执行的ffmpeg 命令是 `ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4`
-优点：极快
-缺点：输入视频必须规格相同，否则 FFmpeg 无法无损拼接，导致拼接出错。
+fast 模式执行的ffmpeg 命令是 `ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4` <br />
+优点：极快 <br />
+缺点：输入视频必须规格相同，否则 FFmpeg 无法无损拼接，导致拼接出错。<br />
 
 **2. target_width / target_height / target_fps** <br />
 - 设置输出分辨率
