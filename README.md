@@ -56,3 +56,13 @@ fast 模式执行的ffmpeg 命令是 `ffmpeg -f concat -safe 0 -i list.txt -c co
 | True（默认） | 视频长度 = 音频长度，视频保证不超出音频   |
 | False        | 视频按拼接长度输出，音频结束后静音       |
 
+## 安装步骤
+1. 先确保电脑已经安装了ffmpeg, 并配了环境变量。<br />
+2. 打开comfyui的目录，运行cmd <br /> 
+```python
+cd ComfyUI/custom_nodes 
+git clone https://github.com/Bluesforests/ComfyUI-ffmpeg_concat
+```
+
+3. 重启comfyui
+
