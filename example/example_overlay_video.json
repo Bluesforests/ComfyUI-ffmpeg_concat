@@ -1,0 +1,383 @@
+{
+  "id": "46ba980f-eef2-48bb-b614-6be05883331b",
+  "revision": 0,
+  "last_node_id": 165,
+  "last_link_id": 223,
+  "nodes": [
+    {
+      "id": 165,
+      "type": "OverlayVideos",
+      "pos": [
+        1796.7415771484375,
+        847.6908569335938
+      ],
+      "size": [
+        270,
+        194
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "bg_video",
+          "type": "STRING",
+          "link": 220
+        },
+        {
+          "name": "fg_video",
+          "type": "STRING",
+          "link": 219
+        },
+        {
+          "name": "external_audio",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": [
+            223
+          ]
+        },
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            222
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OverlayVideos"
+      },
+      "widgets_values": [
+        0,
+        0,
+        200,
+        320,
+        "background"
+      ]
+    },
+    {
+      "id": 161,
+      "type": "ShowVideo",
+      "pos": [
+        2088.350830078125,
+        887.1001586914062
+      ],
+      "size": [
+        244,
+        459.77783203125
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_path",
+          "shape": 7,
+          "type": "STRING",
+          "link": 223
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "ShowVideo",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "PreviewAny",
+      "pos": [
+        2098.07275390625,
+        749.8128051757812
+      ],
+      "size": [
+        220.37799072265625,
+        88
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 222
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "PreviewAny",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 104,
+      "type": "VideoToPath",
+      "pos": [
+        1563.4361572265625,
+        851.2811889648438
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 164
+        },
+        {
+          "name": "frames",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": [
+            220
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VideoToPath",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "fps": true
+          }
+        }
+      },
+      "widgets_values": [
+        16
+      ]
+    },
+    {
+      "id": 122,
+      "type": "LoadVideo",
+      "pos": [
+        1256.953857421875,
+        787.20361328125
+      ],
+      "size": [
+        258.9019775390625,
+        534.2702026367188
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            164
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "LoadVideo",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "file": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "rabitdance.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 117,
+      "type": "LoadVideo",
+      "pos": [
+        981.8030395507812,
+        790.2590942382812
+      ],
+      "size": [
+        251.1122589111328,
+        520.4218139648438
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            163
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.64",
+        "Node name for S&R": "LoadVideo",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "file": true,
+            "upload": true
+          }
+        }
+      },
+      "widgets_values": [
+        "ComfyUI_00169_.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 102,
+      "type": "VideoToPath",
+      "pos": [
+        1564.342041015625,
+        973.572265625
+      ],
+      "size": [
+        210,
+        78
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 163
+        },
+        {
+          "name": "frames",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": [
+            219
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VideoToPath",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "fps": true
+          }
+        }
+      },
+      "widgets_values": [
+        16
+      ]
+    }
+  ],
+  "links": [
+    [
+      163,
+      117,
+      0,
+      102,
+      0,
+      "VIDEO"
+    ],
+    [
+      164,
+      122,
+      0,
+      104,
+      0,
+      "VIDEO"
+    ],
+    [
+      219,
+      102,
+      0,
+      165,
+      1,
+      "STRING"
+    ],
+    [
+      220,
+      104,
+      0,
+      165,
+      0,
+      "STRING"
+    ],
+    [
+      222,
+      165,
+      1,
+      13,
+      0,
+      "*"
+    ],
+    [
+      223,
+      165,
+      0,
+      161,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8769226950000312,
+      "offset": [
+        -798.7546747700001,
+        -569.3459200253113
+      ]
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.27.10",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
