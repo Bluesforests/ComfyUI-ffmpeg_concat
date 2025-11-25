@@ -51,7 +51,7 @@ class VideoToPath:
     OUTPUT_IS_LIST = (False,)
 
     FUNCTION = "convert"
-    CATEGORY = "Video/FFmpeg"
+    CATEGORY = "FFmpeg"
 
     # ====== VIDEO -> path ======
 

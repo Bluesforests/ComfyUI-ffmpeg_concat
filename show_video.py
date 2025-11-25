@@ -13,7 +13,7 @@ class ShowVideo(io.ComfyNode):
         return io.Schema(
             node_id="ShowVideo",
             display_name="Show Video",
-            category="image/video",
+            category="FFmpeg",
             description=(
                 "Shows a preview of an existing video file without saving anything. "
                 "Supports relative paths under the output directory or absolute paths "

@@ -1,6 +1,17 @@
 import os
 import subprocess
 
+# 尝试导入 ComfyUI 的 VideoFromFile 类型，用于构造 VIDEO 对象
+try:
+    # 新版官方路径
+    from comfy_api.input_impl import VideoFromFile
+except ImportError:
+    try:
+        # 一些版本的兼容路径
+        from comfy_api.latest._input_impl.video_types import VideoFromFile  # type: ignore
+    except ImportError:
+        VideoFromFile = None
+
 
 class ConcatVideos:
     @classmethod
@@ -8,7 +19,6 @@ class ConcatVideos:
         return {
             "required": {
                 "video_path1": ("STRING", {"forceInput": True}),
-                "video_path2": ("STRING", {"forceInput": True}),
 
                 # mode: 默认 reencode，"lossless" 改名为 "fast"
                 "mode": (["reencode", "fast"],),
@@ -22,6 +32,7 @@ class ConcatVideos:
                 "format": (["mp4", "mov", "webm"],),
             },
             "optional": {
+                "video_path2": ("STRING", {"forceInput": True}),
                 "video_path3": ("STRING", {"forceInput": True}),
                 "video_path4": ("STRING", {"forceInput": True}),
                 "external_audio_path": ("STRING", {"forceInput": True}),
@@ -31,11 +42,12 @@ class ConcatVideos:
             },
         }
 
-    # 两个输出：路径 + video（实际上是同一个路径）
-    RETURN_TYPES = ("STRING", "STRING")
+    # 两个输出：路径 + video
+    # 第二个输出类型改为 "VIDEO"
+    RETURN_TYPES = ("STRING", "VIDEO")
     RETURN_NAMES = ("output_path", "video")
     FUNCTION = "concat"
-    CATEGORY = "Video/FFmpeg"
+    CATEGORY = "FFmpeg"
 
     # ----------------- 工具方法 -----------------
 
@@ -286,13 +298,13 @@ class ConcatVideos:
     def concat(
         self,
         video_path1,
-        video_path2,
         mode,
         target_width,
         target_height,
         target_fps,
         filename_prefix,
         format,
+        video_path2=None,
         video_path3=None,
         video_path4=None,
         external_audio_path=None,
@@ -316,35 +328,50 @@ class ConcatVideos:
 
         # fast 模式：无条件走无损/快速 concat
         if mode == "fast":
-            cmd, list_file = self._build_fast_concat_cmd(
+            if len(videos) == 1 and not external_audio_path:
+                # 只有一个视频 & 无外部音频：直接 copy 封装
+                cmd = [
+                    "ffmpeg", "-y",
+                    "-i", videos[0],
+                    "-c", "copy",
+                    output_path,
+                ]
+                subprocess.run(cmd, check=True)
+            else:
+                # 多视频 or 单视频 + 外部音频 → 使用 concat demuxer
+                cmd, list_file = self._build_fast_concat_cmd(
+                    videos=videos,
+                    external_audio_path=external_audio_path,
+                    output_path=output_path,
+                    use_shortest=use_shortest,
+                )
+                subprocess.run(cmd, check=True)
+                try:
+                    os.remove(list_file)
+                except:
+                    pass
+
+        else:
+            # reencode 模式：使用 filter_complex concat
+            cmd = self._build_filter_concat_cmd(
                 videos=videos,
                 external_audio_path=external_audio_path,
                 output_path=output_path,
+                target_width=target_width,
+                target_height=target_height,
+                target_fps=target_fps,
                 use_shortest=use_shortest,
             )
             subprocess.run(cmd, check=True)
 
-            # 用完删除临时文件
-            try:
-                os.remove(list_file)
-            except Exception:
-                pass
+        # 这里构造 VIDEO 对象：
+        # 如果有 comfy_api 的 VideoFromFile，就用它；否则退化为字符串路径
+        if VideoFromFile is not None:
+            video_obj = VideoFromFile(output_path)
+        else:
+            video_obj = output_path
 
-            return (output_path, output_path)
-
-        # reencode 模式：使用 filter_complex concat
-        cmd = self._build_filter_concat_cmd(
-            videos=videos,
-            external_audio_path=external_audio_path,
-            output_path=output_path,
-            target_width=target_width,
-            target_height=target_height,
-            target_fps=target_fps,
-            use_shortest=use_shortest,
-        )
-        subprocess.run(cmd, check=True)
-
-        return (output_path, output_path)
+        return (output_path, video_obj)
 
 
 NODE_CLASS_MAPPINGS = {
