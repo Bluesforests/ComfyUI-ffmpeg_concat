@@ -1,6 +1,7 @@
+[中文] | [English](./README_EN.md)
+
 # ConcatVideos — ComfyUI 视频拼接节点（支持多格式、不同帧率、外部音频）
-- ConcatVideos 是一个为 ComfyUI 设计的使用ffmepg 拼接视频的节点，支持 1–4 个视频文件输入，可自动统一分辨率/帧率进行稳定拼接，或以无损/高速方式快速串联视频。
-- 速度非常快，长视频拼接不爆显存。
+- ConcatVideos 是一个基于 ffmepg 能力的comfyui 拼接视频的节点，支持 1–4 个视频文件输入，可自动统一分辨率/帧率进行稳定拼接，或以无损/高速方式快速串联视频。
 
 
 ## 主要特性
@@ -67,5 +68,5 @@ git clone https://github.com/Bluesforests/ComfyUI-ffmpeg_concat
 3. 重启comfyui
 
 ## 使用参考
-![exampleA](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20B.png)
-![exampleB](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20A.png)
+![exampleA](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20A.png)
+![exampleB](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20B.png)

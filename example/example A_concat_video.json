@@ -1,19 +1,19 @@
 {
   "id": "46ba980f-eef2-48bb-b614-6be05883331b",
   "revision": 0,
-  "last_node_id": 147,
-  "last_link_id": 186,
+  "last_node_id": 162,
+  "last_link_id": 207,
   "nodes": [
     {
       "id": 13,
       "type": "PreviewAny",
       "pos": [
-        2124.655029296875,
-        669.787109375
+        2126.661865234375,
+        629.8978271484375
       ],
       "size": [
-        231.41659545898438,
-        134
+        220.37799072265625,
+        88
       ],
       "flags": {},
       "order": 17,
@@ -49,7 +49,7 @@
         78
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -91,15 +91,15 @@
       "id": 104,
       "type": "VideoToPath",
       "pos": [
-        1558.9290771484375,
-        953.8812255859375
+        1528.924072265625,
+        973.10107421875
       ],
       "size": [
         210,
         78
       ],
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -141,15 +141,15 @@
       "id": 117,
       "type": "LoadVideo",
       "pos": [
-        1160,
-        674.0632934570312
+        956.7894287109375,
+        676.5720825195312
       ],
       "size": [
         251.1122589111328,
-        236.7910614013672
+        520.4218139648438
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -174,7 +174,7 @@
         }
       },
       "widgets_values": [
-        "rabitdance.mp4",
+        "ComfyUI_00171_.mp4",
         "image"
       ]
     },
@@ -182,15 +182,15 @@
       "id": 122,
       "type": "LoadVideo",
       "pos": [
-        1160,
-        967.4668579101562
+        1244.431396484375,
+        675.532958984375
       ],
       "size": [
         258.9019775390625,
-        214.51876831054688
+        534.2702026367188
       ],
       "flags": {},
-      "order": 2,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -215,7 +215,7 @@
         }
       },
       "widgets_values": [
-        "rabitdance2.mp4",
+        "ComfyUI_00182_.mp4",
         "image"
       ]
     },
@@ -231,7 +231,7 @@
         282
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -269,7 +269,7 @@
           "type": "STRING",
           "links": [
             170,
-            186
+            206
           ]
         },
         {
@@ -315,7 +315,7 @@
         238
       ],
       "flags": {},
-      "order": 3,
+      "order": 1,
       "mode": 0,
       "inputs": [
         {
@@ -393,15 +393,15 @@
       "id": 127,
       "type": "PreviewAny",
       "pos": [
-        1980,
-        1550
+        1981.517822265625,
+        1436.1640625
       ],
       "size": [
-        260.87725830078125,
-        139.85968017578125
+        262.39508056640625,
+        88
       ],
       "flags": {},
-      "order": 16,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -434,7 +434,7 @@
         58
       ],
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -479,7 +479,7 @@
         282
       ],
       "flags": {},
-      "order": 13,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -516,7 +516,8 @@
           "name": "output_path",
           "type": "STRING",
           "links": [
-            176
+            176,
+            207
           ]
         },
         {
@@ -562,7 +563,7 @@
         282
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -645,7 +646,7 @@
         58
       ],
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -662,7 +663,10 @@
         "ver": "0.3.60",
         "Node name for S&R": "PrimitiveString",
         "ue_properties": {
-          "version": "7.0.1"
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "value": true
+          }
         }
       },
       "widgets_values": [
@@ -698,7 +702,10 @@
         "ver": "0.3.60",
         "Node name for S&R": "PrimitiveString",
         "ue_properties": {
-          "version": "7.0.1"
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "value": true
+          }
         }
       },
       "widgets_values": [
@@ -717,8 +724,8 @@
         58
       ],
       "flags": {},
-      "order": 1,
-      "mode": 0,
+      "order": 6,
+      "mode": 4,
       "inputs": [],
       "outputs": [
         {
@@ -734,7 +741,10 @@
         "ver": "0.3.60",
         "Node name for S&R": "PrimitiveString",
         "ue_properties": {
-          "version": "7.0.1"
+          "version": "7.0.1",
+          "widget_ue_connectable": {
+            "value": true
+          }
         }
       },
       "widgets_values": [
@@ -753,7 +763,7 @@
         134
       ],
       "flags": {},
-      "order": 15,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -786,7 +796,7 @@
         58
       ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -831,7 +841,7 @@
         238
       ],
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
@@ -906,68 +916,65 @@
       }
     },
     {
-      "id": 145,
-      "type": "SaveVideo",
+      "id": 161,
+      "type": "ShowVideo",
       "pos": [
-        2123.67529296875,
-        866.0233764648438
+        2118.947509765625,
+        777.13916015625
       ],
       "size": [
-        270,
-        106
+        244,
+        451.125
       ],
       "flags": {},
       "order": 18,
       "mode": 0,
       "inputs": [
         {
-          "name": "video",
-          "type": "VIDEO",
-          "link": null
-        },
-        {
-          "name": "filename_prefix",
+          "name": "video_path",
+          "shape": 7,
           "type": "STRING",
-          "widget": {
-            "name": "filename_prefix"
-          },
-          "link": 186
+          "link": 206
         }
       ],
       "outputs": [],
       "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.60",
-        "Node name for S&R": "SaveVideo"
+        "Node name for S&R": "ShowVideo",
+        "ue_properties": {
+          "version": "7.0.1"
+        }
       },
-      "widgets_values": [
-        "video/ComfyUI",
-        "auto",
-        "auto"
-      ]
+      "widgets_values": []
     },
     {
-      "id": 147,
-      "type": "Note",
+      "id": 162,
+      "type": "ShowVideo",
       "pos": [
-        2418.794921875,
-        874.16845703125
+        1990.423095703125,
+        1581.501953125
       ],
       "size": [
-        231.06846618652344,
-        219.36981201171875
+        244,
+        451.125
       ],
       "flags": {},
-      "order": 7,
+      "order": 16,
       "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Since ComfyUI doesn't provide a \"show video\" node, we can only temporarily use \"save video\" for previewing. The downside is that the video gets saved an extra time.\n\n因为comfyui 没有提供 show video这样的节点，只能暂时用save video来预览。缺点是视频会多保存一次。"
+      "inputs": [
+        {
+          "name": "video_path",
+          "shape": 7,
+          "type": "STRING",
+          "link": 207
+        }
       ],
-      "color": "#432",
-      "bgcolor": "#653"
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "ShowVideo",
+        "ue_properties": {
+          "version": "7.0.1"
+        }
+      }
     }
   ],
   "links": [
@@ -1084,11 +1091,19 @@
       "STRING"
     ],
     [
-      186,
+      206,
       125,
       0,
-      145,
-      1,
+      161,
+      0,
+      "STRING"
+    ],
+    [
+      207,
+      132,
+      0,
+      162,
+      0,
       "STRING"
     ]
   ],
@@ -1136,10 +1151,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.7972024500000251,
+      "scale": 0.7972024500000277,
       "offset": [
-        -936.60107244116,
-        -1039.8232581709397
+        -817.8561829280762,
+        -844.7200167339647
       ]
     },
     "ue_links": [],
