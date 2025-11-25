@@ -45,6 +45,13 @@ You can also choose whether to use `-shortest` to trim the video duration.
 
 ---
 
+**Video Overlay Node**<br />
+- Overlay videos node.  
+- Uses FFmpeg's `overlay` filter to precisely composite Video A (foreground) onto Video B (background) at a specified position.  
+- FFmpeg’s `overlay` filter natively supports alpha channel blending—transparent overlay is applied automatically as long as the input stream contains a valid alpha channel.
+
+---
+
 ## Parameter Description
 
 ### **1. Mode**
@@ -110,4 +117,6 @@ git clone https://github.com/Bluesforests/ComfyUI-ffmpeg_concat
 
 ![exampleA](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20A.png)
 ![exampleB](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20B.png)
+![exampleC](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20C.png)
+
 

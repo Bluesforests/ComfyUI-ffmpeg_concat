@@ -26,6 +26,13 @@
 可输入单独的音频文件（music / bgm / narration），并选择是否使用 -shortest 截断视频长度。<br />
 shortest默认开启。
 
+**视频叠加节点**<br />
+- overlay videos node。
+- 使用 ffmpeg 的 overlay 滤镜将视频 A（前景）精确叠加到视频 B（背景）的指定位置。
+- FFmpeg 的 overlay 滤镜原生支持 Alpha 通道合成，只要输入流包含有效 alpha，它会自动进行透明叠加。
+
+
+
 ## 参数说明
 
 **1. 模式**
@@ -70,3 +77,4 @@ git clone https://github.com/Bluesforests/ComfyUI-ffmpeg_concat
 ## 使用参考
 ![exampleA](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20A.png)
 ![exampleB](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20B.png)
+![exampleC](https://github.com/Bluesforests/ComfyUI-ffmpeg_concat/blob/main/example/example%20C.png)
