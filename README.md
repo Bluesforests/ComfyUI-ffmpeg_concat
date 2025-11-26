@@ -37,10 +37,13 @@
 可输入单独的音频文件（music / bgm / narration），并选择是否使用 -shortest 截断视频长度。<br />
 shortest默认开启。
 
+---
+
 ### **视频叠加节点**<br />
 - overlay videos node。
 - 使用 ffmpeg 的 overlay 滤镜将视频 A（前景）精确叠加到视频 B（背景）的指定位置。
 - FFmpeg 的 overlay 滤镜原生支持 Alpha 通道合成，只要输入流包含有效 alpha，它会自动进行透明叠加。
+- ⚠️ 叠加透明视频（alpha通道）时，请用 string 节点直接连到 video path，因为comfyui对透明视频不支持，会导致透明失效。
 
 ---
 

@@ -49,6 +49,7 @@ You can also choose whether to use `-shortest` to trim the video duration.
 - Overlay videos node.  
 - Uses FFmpeg's `overlay` filter to precisely composite Video A (foreground) onto Video B (background) at a specified position.  
 - FFmpeg’s `overlay` filter natively supports alpha channel blending—transparent overlay is applied automatically as long as the input stream contains a valid alpha channel.
+- ⚠️ When overlaying transparent videos (with alpha channel), please connect the **video path** directly using a **String** node, because ComfyUI does not properly support transparent videos, which can cause the transparency to be lost.
 
 ---
 
