@@ -2,14 +2,16 @@
 
 # ConcatVideos — ComfyUI 视频拼接，叠加，剪切节点
 
-- ConcatVideos 是一个基于 ffmepg 能力的comfyui 拼接视频的节点，支持 1–4 个视频文件输入，可自动统一分辨率/帧率进行稳定拼接，或以无损/高速方式快速串联视频。
+- **ConcatVideos** 是一个基于 ffmepg 能力的comfyui 拼接视频的节点，支持 1–4 个视频文件输入，可自动统一分辨率/帧率进行稳定拼接，或以无损/高速方式快速串联视频。
   
 
   **2025.12.12 更新：**
 
-- Overlay video 视频叠加，支持透明视频叠加
+- **Overlay video** 视频叠加，支持透明视频叠加
 
-- Cut video 视频剪切，支持按时间剪切和按帧数剪切。
+- **Cut video** 视频剪切，支持按时间剪切和按帧数剪切。
+
+- **Audio to Path**
 
 
 ## 主要特性

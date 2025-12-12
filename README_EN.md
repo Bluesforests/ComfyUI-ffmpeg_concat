@@ -12,6 +12,7 @@ or concatenate videos quickly in a **lossless/high-speed mode**.
 
 - **Overlay video**: Video overlay with support for transparent videos.
 - **Cut video**: Video trimming, supporting both time-based and frame-based cutting.
+- **Audio to Path**
 
 ## Key Features
 
