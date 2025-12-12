@@ -2,6 +2,8 @@ from .concat_videos_path import NODE_CLASS_MAPPINGS as CONCATPATH_M
 from .videotopath import NODE_CLASS_MAPPINGS as PATH_M
 from .show_video import NODE_CLASS_MAPPINGS as SHOW_M
 from .OverlayVideos import NODE_CLASS_MAPPINGS as OVER_M
+from .audiotopath import NODE_CLASS_MAPPINGS as AUDIO_M
+from .FFmpegCutVideo import NODE_CLASS_MAPPINGS as CUT_M
 
 
 NODE_CLASS_MAPPINGS = {
@@ -9,6 +11,8 @@ NODE_CLASS_MAPPINGS = {
     **PATH_M,
     **SHOW_M,
     **OVER_M,
+    **AUDIO_M,
+    **CUT_M,
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {

@@ -1,12 +1,17 @@
 [中文](./README.md) | [English]
 
-# ConcatVideos — ComfyUI Video Concatenation Node
+# ConcatVideos — ComfyUI Video concatenation, overlay, and cutting nodes
 
 **(Supports multiple formats, different frame rates, and external audio)**
 
 ConcatVideos is a ComfyUI node powered by **FFmpeg**, designed for stable and flexible video concatenation.
 It supports **1–4 video inputs**, can automatically unify resolutions/frame rates for stable merging,
 or concatenate videos quickly in a **lossless/high-speed mode**.
+
+**Update: December 12, 2025**
+
+- **Overlay video**: Video overlay with support for transparent videos.
+- **Cut video**: Video trimming, supporting both time-based and frame-based cutting.
 
 ## Key Features
 
